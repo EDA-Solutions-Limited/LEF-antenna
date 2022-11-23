@@ -1,0 +1,307 @@
+# C:\Users\jmeng\Documents\Tanner EDA\ShippingFiles_NonDM\Designs\ADC8\ADC8\Data\Generic250nm_tech.lef, written by L-Edit Version 2017.4 Beta.001 on Fri May 18 14:11:05 2018
+
+VERSION 5.7 ;
+BUSBITCHARS "[]" ; 
+DIVIDERCHAR "/" ; 
+UNITS 
+	DATABASE MICRONS 1000 ; 
+END UNITS 
+MANUFACTURINGGRID 0.005 ; 
+
+LAYER OVERLAP 
+    TYPE OVERLAP ; 
+END OVERLAP
+
+LAYER Poly
+	TYPE MASTERSLICE ;
+END Poly
+
+LAYER Contact
+      TYPE MASTERSLICE ;
+END Contact
+
+LAYER Metal1
+   TYPE ROUTING ;
+   DIRECTION HORIZONTAL ;
+   WIDTH 0.35 ;
+   PITCH 1.35 ;
+   SPACING 0.35 ;
+   SPACING 0.75 RANGE 8.01 1000.0 ;
+   OFFSET 0.675 ;
+   AREA 0 ;
+   CAPACITANCE CPERSQDIST 0.000109 ;
+   EDGECAPACITANCE 0.0000977 ;
+   RESISTANCE RPERSQ 0.09 ;
+END Metal1
+
+LAYER Via1
+    TYPE CUT ;   
+    ENCLOSURE 0.15 0.15 ;
+#    SPACING	0.7 ;
+#    WIDTH 0.35 ;
+END Via1
+
+LAYER Metal2
+   TYPE ROUTING ;
+   DIRECTION VERTICAL ;
+   WIDTH 0.35 ;
+   PITCH 1.15 ;
+   SPACING 0.5 ;
+   SPACING 0.75 RANGE 8.01 1000.0 ;
+   OFFSET 0.575 ;
+   AREA 0 ;
+   CAPACITANCE CPERSQDIST 0.000103 ;
+   EDGECAPACITANCE 0.0000987 ;
+   RESISTANCE RPERSQ 0.09 ;   
+END Metal2
+
+LAYER Via2
+    TYPE CUT ;
+    ENCLOSURE 0.15 0.15 ;    
+#    SPACING	0.7 ;
+#    WIDTH 0.35 ;
+END Via2
+
+LAYER Metal3
+   TYPE ROUTING ;
+   DIRECTION HORIZONTAL ;
+   WIDTH 0.35 ;
+   PITCH 1.35 ;
+   SPACING 0.5 ;
+   SPACING 0.75 RANGE 8.01 1000.0 ;
+   OFFSET 0.675 ;
+   AREA 0 ;
+   CAPACITANCE CPERSQDIST 0.000103 ;
+   EDGECAPACITANCE 0.0000987 ;
+   RESISTANCE RPERSQ 0.09 ;   
+END Metal3
+
+LAYER Via3
+    TYPE CUT ;
+    ENCLOSURE 0.15 0.15 ;    
+#    SPACING	0.7 ;
+#    WIDTH 0.35 ;
+END Via3
+
+LAYER Metal4
+   TYPE ROUTING ;
+   DIRECTION VERTICAL ;
+   WIDTH 0.35 ;
+   PITCH 1.15 ;
+   SPACING 0.5 ;
+   SPACING 0.75 RANGE 8.01 1000.0 ;
+   OFFSET 0.575 ;
+   AREA 0 ;
+   CAPACITANCE CPERSQDIST 0.0000518 ;
+   EDGECAPACITANCE 0.0001123 ;
+   RESISTANCE RPERSQ 0.043 ;   
+END Metal4
+
+# VIA Met1-Met2 for normal routing
+VIA Via1_route DEFAULT
+RESISTANCE 6 ;
+ LAYER Metal1 ;
+ RECT -.325 -.325 .325 .325 ;
+ LAYER Via1 ;
+ RECT -0.175 -0.175 0.175 0.175 ;
+ LAYER Metal2 ;
+ RECT -.325 -.325 .325 .325 ;
+END Via1_route
+
+# Double Via Met1-Met2 for normal routing
+VIA VIA1_CH1 DEFAULT
+    RESISTANCE 0.6 ;
+    LAYER Metal1 ;
+        RECT -.325 -.325 1.025 .325 ;
+    LAYER Via1 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT  0.525 -0.175  0.875 0.175 ;
+    LAYER Metal2 ;
+        RECT -.325 -.325 1.025 .325 ;
+END VIA1_CH1
+
+VIA VIA1_CH2 DEFAULT
+    RESISTANCE 0.6 ;
+    LAYER Metal1 ;
+        RECT -1.025 -.325 .325 .325 ;
+    LAYER Via1 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT -0.875  -0.175 -0.525 0.175 ;
+    LAYER Metal2 ;
+        RECT -1.025 -.325 .325 .325 ;
+END VIA1_CH2
+
+VIA VIA1_CV1 DEFAULT
+		RESISTANCE 0.6 ;
+    LAYER Metal1 ;
+        RECT -.325 -.325 .325 1.025 ;
+    LAYER Via1 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT -0.175 0.525  0.175 0.875 ;
+    LAYER Metal2 ;
+        RECT -.325 -.325 .325 1.025 ;
+END VIA1_CV1
+
+VIA VIA1_CV2 DEFAULT
+    RESISTANCE 0.6 ;
+    LAYER Metal1 ;
+        RECT  -.325 -1.025 .325 .325 ;
+    LAYER Via1 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT -0.175 -0.875 0.175 -0.525 ;
+    LAYER Metal2 ;
+        RECT  -.325 -1.025 .325 .325 ;
+END VIA1_CV2
+
+# Via Met2-Met3 for normal routing
+VIA Via2_route DEFAULT
+RESISTANCE 6 ;
+LAYER Metal2 ;
+ RECT -.325 -.325 .325 .325 ;
+LAYER Via2 ;
+ RECT -0.175 -0.175 0.175 0.175 ;
+LAYER Metal3 ;
+ RECT -.325 -.325 .325 .325 ;
+END Via2_route
+
+# Double Via Met2-Met3 for normal routing
+VIA VIA2_CH1 DEFAULT
+    RESISTANCE 0.6 ;
+    LAYER Metal2 ;
+        RECT -.325 -.325 1.025 .325 ;
+    LAYER Via2 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT  0.525 -0.175  0.875 0.175 ;
+    LAYER Metal3 ;
+        RECT -.325 -.325 1.025 .325 ;
+END VIA2_CH1
+
+VIA VIA2_CH2 DEFAULT
+    RESISTANCE 0.6 ;
+    LAYER Metal2 ;
+        RECT -1.025 -.325 .325 .325 ;
+    LAYER Via2 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT -0.875  -0.175 -0.525 0.175 ;
+    LAYER Metal3 ;
+        RECT -1.025 -.325 .325 .325 ;
+END VIA2_CH2
+
+VIA VIA2_CV1 DEFAULT
+		RESISTANCE 0.6 ;
+    LAYER Metal2 ;
+        RECT -.325 -.325 .325 1.025 ;
+    LAYER Via2 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT -0.175 0.525  0.175 0.875 ;
+    LAYER Metal3 ;
+        RECT -.325 -.325 .325 1.025 ;
+END VIA2_CV1
+
+VIA VIA2_CV2 DEFAULT
+    RESISTANCE 0.6 ;
+    LAYER Metal2 ;
+        RECT  -.325 -1.025 .325 .325 ;
+    LAYER Via2 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT -0.175 -0.875 0.175 -0.525 ;
+    LAYER Metal3 ;
+        RECT  -.325 -1.025 .325 .325 ;
+END VIA2_CV2
+
+# Via Met3-Met4 for normal routing
+VIA Via3_route DEFAULT
+RESISTANCE 6 ;
+LAYER Metal3 ;
+ RECT -.325 -.325 .325 .325 ;
+LAYER Via3 ;
+ RECT -0.175 -0.175 0.175 0.175 ;
+LAYER Metal4 ;
+ RECT -.325 -.325 .325 .325 ;
+END Via3_route
+
+# Double Via Met3-Met4 for normal routing
+VIA VIA3_CH1 DEFAULT
+    RESISTANCE 0.6 ;
+    LAYER Metal3 ;
+        RECT -.325 -.325 1.025 .325 ;
+    LAYER Via3 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT  0.525 -0.175  0.875 0.175 ;
+    LAYER Metal4 ;
+        RECT -.325 -.325 1.025 .325 ;
+END VIA3_CH1
+
+VIA VIA3_CH2 DEFAULT
+    RESISTANCE 0.6 ;
+    LAYER Metal3 ;
+        RECT -1.025 -.325 .325 .325 ;
+    LAYER Via3 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT -0.875  -0.175 -0.525 0.175 ;
+    LAYER Metal4 ;
+        RECT -1.025 -.325 .325 .325 ;
+END VIA3_CH2
+
+VIA VIA3_CV1 DEFAULT
+		RESISTANCE 0.6 ;
+    LAYER Metal3 ;
+        RECT -.325 -.325 .325 1.025 ;
+    LAYER Via3 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT -0.175 0.525  0.175 0.875 ;
+    LAYER Metal4 ;
+        RECT -.325 -.325 .325 1.025 ;
+END VIA3_CV1
+
+VIA VIA3_CV2 DEFAULT
+    RESISTANCE 0.6 ;
+    LAYER Metal3 ;
+        RECT  -.325 -1.025 .325 .325 ;
+    LAYER Via3 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        RECT -0.175 -0.875 0.175 -0.525 ;
+    LAYER Metal4 ;
+        RECT  -.325 -1.025 .325 .325 ;
+END VIA3_CV2
+
+# Array 
+VIARULE ruleVia12 GENERATE
+    LAYER Metal2 ;
+        ENCLOSURE 0.15 0.15 ;
+
+    LAYER Metal1 ;
+        ENCLOSURE 0.15 0.15 ;
+
+    LAYER Via1 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        SPACING 0.70  BY 0.70  ;
+        RESISTANCE 1.2 ;
+END ruleVia12
+
+VIARULE ruleVia23 GENERATE
+    LAYER Metal3 ;
+        ENCLOSURE 0.15 0.15 ;
+
+    LAYER Metal2 ;
+        ENCLOSURE 0.15 0.15 ;
+
+    LAYER Via2 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        SPACING 0.70  BY 0.70  ;
+        RESISTANCE 1.2 ;
+END ruleVia23
+
+VIARULE ruleVia34 GENERATE
+    LAYER Metal4 ;
+        ENCLOSURE 0.15 0.15 ;
+
+    LAYER Metal3 ;
+        ENCLOSURE 0.15 0.15 ;
+
+    LAYER Via3 ;
+        RECT -0.175 -0.175 0.175 0.175 ;
+        SPACING 0.70  BY 0.70  ;
+        RESISTANCE 1.2 ;
+END ruleVia34
+

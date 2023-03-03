@@ -1,0 +1,7 @@
+{
+"extralayers": ["Active"],
+
+"prepsvrf": "\ndiffct=NOT Active Poly\nCONNECT diffct Contact\ngate = AND Active Poly\nCONNECT Poly gate\nCONNECT Poly Contact\n"
+
+
+}

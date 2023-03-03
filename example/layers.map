@@ -1,0 +1,28 @@
+#Layer Name          Layer Purpose  Stream Number  Datatype 
+N_Well               drawing         1            0
+Deep_N_Well          drawing         2            0
+P_Well               drawing         3            0
+Active               drawing         4            0
+ThickActive          drawing         5            0
+N_Implant            drawing         6            0
+P_Implant            drawing         7            0
+Poly                 drawing         8            0
+SilicideBlock        drawing         9            0
+Poly2                drawing        10            0
+Contact              drawing        11            0
+Metal1               drawing        12            0
+Via1                 drawing        13            0
+Metal2               drawing        14            0
+Via2                 drawing        15            0
+Metal3               drawing        16            0
+Via3                 drawing        17            0
+Top_Capacitor_Plate  drawing        18            0
+Metal4               drawing        19            0
+Passivation          drawing        20            0
+Resistor_IA          drawing        21            0
+Diode_ID             drawing        23            0
+LPNP_ID              drawing        24            0
+PNP_Emitter_ID       drawing        25            0
+Device_ID            drawing        29            0
+
+        
